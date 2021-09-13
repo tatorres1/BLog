@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+
+    <title>User Registration</title>
+</head>
+
+<body>
+    <main>
+        <div class="wrapper row1">
+            <header id="header" class="hoc clear">
+                <div id="logo" class="fl_left">
+                    <!-- ################################################################################################ -->
+                    <h1 class="logoname"><a href="../index.html">The<span>B</span>logger</a></h1>
+                    <!-- ################################################################################################ -->
+                </div>
+                <nav id="mainav" class="fl_right">
+                    <!-- ################################################################################################ -->
+                    <ul class="clear">
+                        <li class="active"><a href="../index.html">Inicio</a></li>
+                        <li><a class="drop" href="#">Historias</a>
+                            <ul>
+                                <li><a href="pages/gallery.html">Terror</a></li>
+                                <li><a href="pages/full-width.html">Suspenso</a></li>
+                                <li><a href="pages/sidebar-left.html">Romance</a></li>
+                                <!-- <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+                    <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+                    <li><a href="pages/font-icons.html">Font Icons</a></li> -->
+                            </ul>
+                        </li>
+                        <li><a class="drop" href="#">Login</a>
+                            <ul>
+                                <li><a href="../pages/creator-form.html">Creator</a></li>
+                                <li><a href="#">Reader- user</a></li>
+                            </ul>
+                        </li>
+                </nav>
+            </header>
+        </div>
+        <br>
+        <div class="hoc clear">
+            <h4 class="mb-3">Looking for...</h4>
+            <input id="txtFind" type="text" class="form-control" placeholder="Find by username or id"
+                aria-label="Find by name or id" aria-describedby="button-addon2">
+            <button id="btnFind" class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+        </div>
+        <br>
+        <div class="hoc clear">
+            <hr class="my-4">
+            <h4 class="mb-3">Register of User</h4>
+            <form method="POST" action="user-list.html" id="frmUser" class="needs-validation" novalidate>
+                <input type="hidden" id="txtId_User" value="0">
+                <div class="wrapper coloured" class="row g-3">
+                    <div class="col-12">
+                        <label for="txtName" class="form-label">Name<input style="color: gray" type="text"
+                                class="form-control" id="txtName" placeholder="Enter your name" required></label>
+                        <div class="invalid-feedback"> </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="txtDate_Birth" class="form-label">Birthday <input style="color: gray" type="date"
+                                class="form-control" id="txtDate_Birth" placeholder="" required> <span
+                                class="text-muted"></span></label>
+                        <div class="invalid-feedback"> </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="txtNacionality" class="form-label">Nacionality <input style="color: gray"
+                                type="text" class="form-control" id="txtNacionality" placeholder="Ex:Ecuadorian"
+                                value="" required></label>
+
+                        <div class="invalid-feedback">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label for="txtMail" class="form-label">E-mail<input style="color: gray" type="text"
+                                class="form-control" id="txtMail" placeholder="example@gmail.com" value=""></label>
+
+                    </div>
+
+                    <div class="col-sm-4">
+                        <label for="txtId_Users" class="form-label">Id User<input style="color: gray" type="text"
+                                class="form-control" id="txtId_Users" placeholder="Ex: teitor" value=""></label>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label for="txtUser_Password" class="form-label">Password <input style="color: gray" type="password"
+                                min="1" max="20" class="form-control" id="txtUser_Password"> </label>
+                    </div>
+                    <br>
+                </div>
+                <hr class="my-4">
+                <button type="submit" class="w-100 btn btn-success btn-lg">Save User</button>
+            </form>
+        </div>
+
+    </main>
+    <footer></footer>
+    <script src="../layout/scripts/main.js"></script>
+    <script src="../layout/scripts/jquery.min.js"></script>
+    <script src="../layout/scripts/form-validation.js"></script>
+    <script src="../layout/scripts/jquery.backtotop.js"></script>
+    <script src="../layout/scripts/jquery.mobilemenu.js"></script>
+    <script src="../layout/scripts/script-user-form.js"></script>
+    <!-- Homepage specific -->
+    <script src="../layout/scripts/jquery.easypiechart.min.js"></script>
+</body>
+
+</html>
