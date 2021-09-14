@@ -27,6 +27,7 @@ function retrieve(id) {
 
 function show(list){ 
     $("#tblCreators").empty(); //Eliminar el contenido del tbody de la tabla
+    console.log("Lista");
     list.forEach(creator => {        
         $("#tblCreators").append('<tr>' 
         + '<td>' + creator.id_Creator +'</td>'

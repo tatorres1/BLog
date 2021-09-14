@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
-    <!--<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">-->
-    <title>User List</title>
-</head>
 
+    <title>Login User</title>
+</head>
 <body>
     <main>
         <div class="wrapper row1">
@@ -36,46 +34,45 @@
                     <ul>
                     <!-- <li><a href="pages/creator-form.html">Creator</a></li>--> 
                       <li><a href="../pages/user-form.html">User Register</a></li>
-                      <li><a href="../pages/user-login.html">Login</a></li>
+                      <li><a href="#">Login</a></li>
                     </ul>
                   </li>
                   <li><a class="drop" href="#">Creator</a>
                     <ul>
                       <li><a href="../pages/creator-form.html">Creator Register</a></li>
-                      <!-- <li><a href="pages/user-form.html">Login</a></li>-->
+                      <li><a href="../pages/creator-login.html">Login</a></li>
                     </ul>
-                   
                   </li>
               </nav>
             </header>
-          </div>
-        <section>
+     </div>
+     <div class="hoc clear">
+        <hr class="my-4">
+        <h4 class="mb-3">Login of User</h4>
+        <form method="POST" id="frmUserLogin" class="needs-validation" novalidate>
+            <input type="hidden" id="txtId_User" value="0">
+            <div class="wrapper coloured" class="row g-3">
+
+                <div class="col-sm-4">
+                    <label for="txtId_Users" class="form-label">Id User<input style="color: gray" type="text"
+                            class="form-control" id="txtId_Users" placeholder="Ex: teitor" value=""></label>
+                </div>
+                <div class="col-sm-6">
+                    <label for="txtUser_Password" class="form-label">Password <input style="color: gray" type="password"
+                            min="1" max="20" class="form-control" id="txtUser_Password"> </label>
+                </div>
+                <br>
+            </div>
+            <hr class="my-4">
+            <a class="btn" onclick="login()">Login</a><!--para llamar a la funcion dejs-->
+            
             <br>
-            <h3>User list</h3>
-
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Birthday</th>
-                        <th scope="col">Nacionality</th>
-                        <th scope="col">Mail</th>
-                        <th scope="col">Id User</th>
-                        <th scope="col">Password</th>
-                        <th scope="col"><a href="user-form.html" class="btn btn-success">New User</a></th>
-                    </tr>
-                </thead>
-                <tbody id="tblUsers">
-                </tbody>
-            </table>
-        </section>
+        </form>
+    </div>
     </main>
-    <footer></footer>
-
-    <script src="../layout/scripts/jquery.min.js"></script>
-    <script src="../layout/scripts/jquery.easypiechart.min.js"></script>
-    <script src="../layout/scripts/script-user-list.js"></script>
 </body>
+ <script src="../layout/scripts/jquery.min.js"></script>
+    <script src="../layout/scripts/jquery.easypiechart.min.js"></script>
+<script src="../layout/scripts/script-user-login.js"></script>
 
 </html>

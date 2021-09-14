@@ -1,14 +1,14 @@
 function show(list){ 
     $("#tblUsers").empty(); //Eliminar el contenido del tbody de la tabla
-    list.forEach(user => {  
-        alert("31");      
-        $("#tblUsers").append('<tr>'            
+    list.forEach(user => {       
+        $("#tblUsers").append('<tr>'   
+           + '<td>' + user.id_User +'</td>'         
             + '<td>' + user.name +'</td>'
             + '<td>' + user.date_Birth +'</td>'
             + '<td>' + user.nacionality +'</td>'
             + '<td>' + user.mail +'</td>' 
-            + '<td>' + user.Id_Users +'</td>'
-            + '<td>' + user.User_Password +'</td>'          
+            + '<td>' + user.id_Users +'</td>'
+            + '<td>' + user.user_Password +'</td>'          
             //Boton de consultar
             + '<td>'
          //   + '<button onclick="retrieve('+ creator.idCreator +')" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mdVariedad">Consultar</button>'
@@ -25,7 +25,6 @@ function list(){
         contentType : "application/json",
         dataType : "json",
         success : function(response){
-            alert("54");
             console.log(response);
             //response trae la lista de variedades como un Arreglo JSON
             show(response);

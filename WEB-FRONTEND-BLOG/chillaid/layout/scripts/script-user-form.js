@@ -1,10 +1,11 @@
 function set(user){
+    $("#txtId_User").val(user.id_User);
     $("#txtName").val(user.name);
     $("#txtDate_Birth").val(user.date_Birth);
     $("#txtNacionality").val(user.nacionality);
     $("#txtMail").val(user.mail);
-    $("#txtId_Users").val(user.Id_Users);
-    $("#txtUser_Password").val(user.User_Password);
+    $("#txtId_Users").val(user.id_Users);
+    $("#txtUser_Password").val(user.user_Password);
 }
 
 function retrieve(){       
@@ -60,13 +61,14 @@ function retrieve(){
 }
 
 function serializeForm(){
-    let user = {
+    let user =  {
+        "id_User":$("#txtId_User").val(),
         "name" : $("#txtName").val(),
         "date_Birth" : $("#txtDate_Birth").val(),
         "nacionality" : $("#txtNacionality").val(), 
         "mail" : $("#txtMail").val(),       
-        "Id_Users" : $("#txtId_Users").val(),
-        "User_Password" : $("#txtUser_Password").val(),
+        "id_Users" : $("#txtId_Users").val(),
+        "user_Password" : $("#txtUser_Password").val(),
     };
     return user;
 }
@@ -77,8 +79,8 @@ function save(){
     console.log(user);
     var requestBody = JSON.stringify(user);
     console.log(requestBody);
-    //Utilizar jQuery AJAX para enviar al Backend
-    if(user.Id_User == 0){
+    //Utilizar jQuery AJAX para enviar al Backendexit
+    if(user.id_User == 0){
         $.ajax({        
             type: "POST", //Verbo de HTTP a utilizar
             url: "http://localhost:8080/user/create", //Dirección para realizar la petición HTTP
@@ -94,9 +96,9 @@ function save(){
 		    }            
         });
     }
-    else{
+    /*else{
         //Update
-        let id = user.Id_User;
+        let id = user.id_User;
         $.ajax({        
             type: "PUT", //Verbo de HTTP a utilizar
             url: "http://localhost:8080/user/update/" + id, //Dirección para realizar la petición HTTP
@@ -111,7 +113,7 @@ function save(){
 			    console.error(err);
 		    }            
         });
-    }
+    }*/
 }
 
 $(function() {       
