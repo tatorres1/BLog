@@ -12,4 +12,6 @@ public interface IUserService {
 	public Optional< User> findById(Integer id);//consult
 	public void delete (Integer id);//update
 	public List<User>findAll();//list
+	//funcion creada en IUser
+	public User findByIdUsers(String u);
 }

@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import WebBackendBlog.models.entities.Commentary;
 import WebBackendBlog.models.service.intefaces.ICommentaryService;
 @CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
-
 @RestController
 @RequestMapping("/commentary")
 public class CommentaryController {

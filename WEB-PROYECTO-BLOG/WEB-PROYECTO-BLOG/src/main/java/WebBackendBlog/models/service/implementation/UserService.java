@@ -45,5 +45,11 @@ public class UserService implements IUserService{
 		// TODO Auto-generated method stub
 		return (List<User>) repository.findAll();
 	}
+//aqui se implementa la fn
+	@Override
+	public User findByIdUsers(String u) {
+		// TODO Auto-generated method stub	
+		return repository.findByIdUsers(u);
+	}
 
 }

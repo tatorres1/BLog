@@ -2,6 +2,7 @@ package WebBackendBlog.models.entities;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -9,7 +10,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty.Access;
 @Entity //decorador
 @Table(name="Publications")
 public class Publication implements Serializable {
@@ -37,6 +45,12 @@ public class Publication implements Serializable {
 	@Column(name="Rate")
 	private int _Rate;
 
+	@OneToMany(mappedBy = "publication")	
+	private List<Commentary> commentaries;
+	
+	@JoinColumn(name="IdCreator", referencedColumnName= "IdCreator")
+	@ManyToOne
+	private Creator creator;
 //dos constructores uno vacio y otro con la primary class
 public Publication() {
 	super();
@@ -99,11 +113,22 @@ public static long getSerialversionuid() {
 	return serialVersionUID;
 }
 
+@JsonIgnore
+public List<Commentary> getCommentaries() {
+	return commentaries;
+}
+@JsonProperty(access = Access.WRITE_ONLY)
+public void setCommentaries(List<Commentary> commentaries) {
+	this.commentaries = commentaries;
+}
 
+public Creator getCreator() {
+	return creator;
+}
 
-
-
-
+public void setCreator(Creator creator) {
+	this.creator = creator;
+}
 
 
 

@@ -10,4 +10,5 @@ public interface ICreatorService {
 	public Optional< Creator> findById(Integer id);//consult
 	public void delete (Integer id);//update
 	public List<Creator>findAll();//list
+	public Creator findByIdCreators(String c);//para login
 }

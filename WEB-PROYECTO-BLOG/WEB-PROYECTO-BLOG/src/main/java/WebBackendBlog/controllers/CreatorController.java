@@ -100,4 +100,30 @@ public class CreatorController {
 		}		
 	}
 
+	@PostMapping("/login")
+	//paradevolverel codigo del stado y el body
+	public ResponseEntity<?> Login(@RequestBody Creator v){
+		//dedicado a enviar codigos htttp
+		try {
+			//aqui devuelveel usuario con el id
+			Creator c = service.findByIdCreators(v.getId_Creators());
+			//primero verifico si esta vacio luego crede
+			if(c == null) {
+				return ResponseEntity.status(HttpStatus.NOT_FOUND).body("idCreador no encontrado");		
+			}
+			//si el usuario no es nulo, means que el usuario paso pero verific a contrasena
+			//si las dos correspondes, responde un ok
+			if(c.getCreator_Password().equals(v.getCreator_Password())) {
+				return ResponseEntity.status(HttpStatus.OK).body("Verified!");		
+			}
+			//si no hay ok es porque las contra no son iguales y regresa el no autorizado ya que si existe pero no es correcta
+			return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(" Password Error!");	
+		}catch(Exception ex) {
+			//falla de logica
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(ex.getMessage());
+		}
+	}
+	
+	
+	
 }

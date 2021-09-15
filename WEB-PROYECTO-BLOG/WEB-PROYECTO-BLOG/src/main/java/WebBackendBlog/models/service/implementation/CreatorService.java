@@ -45,4 +45,10 @@ public class CreatorService implements ICreatorService {
 		return (List<Creator>) repository.findAll();
 	}
 
+	@Override //implemento la funcion findbi
+	public Creator findByIdCreators(String c) {
+		// TODO Auto-generated method stub
+		return repository.findByIdCreators(c);
+	}
+
 }

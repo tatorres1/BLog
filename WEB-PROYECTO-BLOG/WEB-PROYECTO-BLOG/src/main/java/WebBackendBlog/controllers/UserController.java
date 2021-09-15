@@ -21,15 +21,12 @@ import WebBackendBlog.models.entities.User;
 import WebBackendBlog.models.service.intefaces.IUserService;
 
 @CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
-
 @RestController
 @RequestMapping("/user")
 public class UserController {
 	@Autowired
 	IUserService service;
-		
-	//CRUD - L
-	//Create
+
 	@PostMapping("/create")
 	public ResponseEntity<?> create(@RequestBody User v) {
 		try {
@@ -101,4 +98,44 @@ public class UserController {
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(ex.getMessage());
 		}		
 	}
+	
+	 
+	//LOGIN!get inseguro!
+	//primero el Post ya que recibo un user como es compuesto es body y es post 
+	@PostMapping("/login")
+	//paradevolverel codigo del stado y el body
+	public ResponseEntity<?> Login(@RequestBody User v){
+		//cuestiones de logica
+		//dedicado a enviar codigos htttp
+		try {
+			//aqui devuelveel usuario con el id
+			User u = service.findByIdUsers(v.getId_Users());
+			//primero verifico si esta vacio luego crede
+			if(u == null) {
+				return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Usuario no encontrado");		
+			}
+			//si el usuario no es nulo, means que el usuario paso pero verific a contrasena
+			//si las dos correspondes, responde un ok
+			if(u.getUser_Password().equals(v.getUser_Password())) {
+				return ResponseEntity.status(HttpStatus.OK).body("Verified!");		
+			}
+			//si no hay ok es porque las contra no son iguales y regresa el no autorizado ya que si existe pero no es correcta
+			return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Error!");	
+		}catch(Exception ex) {
+			//falla de logica
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(ex.getMessage());
+		}
+	}
+	
+	
+	
+	
+	
 }
+
+
+
+
+
+
+

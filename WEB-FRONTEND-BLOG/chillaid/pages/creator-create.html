@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+  <link href="../layout/styles/styles-creator.css" rel="stylesheet" type="text/css" media="all">
+  <title>Creator</title>
+</head>
+
+<body>
+  <main class="container w-75 bg-light mt-4 rounded shadow">
+    <div class="wrapper row1">
+      <header id="header" class="hoc clear">
+        <div id="logo" class="fl_left">
+          <!-- ################################################################################################ -->
+          <h1 class="logoname"><a href="../index.html">The<span>B</span>logger</a></h1>
+          <!-- ################################################################################################ -->
+        </div>
+        <nav id="mainav" class="fl_right">
+          <!-- ################################################################################################ -->
+          <ul class="clear">
+            <li class="active"><a href="../index.html">Inicio</a></li>
+            <li><a class="drop" href="#">Historias</a>
+              <ul>
+                <li><a href="../pages/horror-story.html">Horror</a></li>
+                <li><a href="../pages/action-story.html">Action</a></li>
+                <li><a href="../pages/romance-story.html">Romance</a></li>
+              </ul>
+            </li>
+            <a class="drop" href="../index.html">Logout</a>
+
+        </nav>
+      </header>
+    </div>
+  </main>
+  <div class="bgded overlay"
+    style="background-image:url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Ym9va3NoZWxmfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80');">
+    <div id="pageintro" class="hoc clear">
+      <h3 class="heading" align="center"><b>Star to write</b></h3>
+
+      <article>
+        <a class="btn" href="#">Comienza Aqui</a>
+      </article>
+
+    </div>
+
+    <div  style="background-image:url('https://i.pinimg.com/originals/74/42/df/7442df453f2197f67249ab1b49ebb44b.jpg');">
+      <section id="services" class="hoc container clear">
+        <!-- ################################################################################################ -->
+        <div class="hoc clear">
+          <form method="POST" id="frmUserLogin" class="modal-content" novalidate
+            style="background-color: rgb(174, 187, 216); padding: 20ch;">
+            <input type="hidden" id="txtId_Creator" value="0">
+            <h1><b>FILL THE FORM</b></h1>
+            <p style="color: rgb(74, 128, 163); text-align:center">Please fill in this form to create a story.</p>
+            <div class="container">
+              <h2><b>TITLE</b></h2>
+              <input style="color: gray" type="text" class="form-control" id="txt_Title" placeholder="Enter Title"
+                value="">
+              
+              <h2><b>DATE OF PUBLICATION</b></h2>
+              <input class="form-control" style="color: gray" type="date" id="txtDate_Publication" placeholder="" >
+              <br><br>
+              <h3><b>TYPE OF PUBLICATION</b></h3>
+              <span class="checkmark"><b>Thiller</b></span>
+              <input type="radio" checked="checked" name="radio">
+
+              <span class="checkmark"><b>Love</b></span>
+              <input type="radio" checked="checked" name="radio">
+              <span class="checkmark"><b>Fiction</b></span>
+              <input type="radio" checked="checked" name="radio">
+              <br>
+            </div>
+            <!--para llamar a la funcion dejs-->
+            <h2><b>DEVELOPMENT</b></h2>
+            <textarea style="color: rgb(8, 31, 46)" id="w3review" name="w3review" rows="12" cols="90">
+                Write here...
+               </textarea>
+            <br>
+            <a class="btn ">Submit</a>
+            <br>
+          </form>
+        </div>
+        <!-- ################################################################################################ -->
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

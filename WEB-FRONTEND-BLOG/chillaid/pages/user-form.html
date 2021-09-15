@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../layout/styles/styles-creator.css" rel="stylesheet" type="text/css" media="all">
 
     <title>User Registration</title>
 </head>
@@ -25,18 +26,16 @@
                   <li class="active"><a href="../index.html">Inicio</a></li>
                   <li><a class="drop" href="#">Historias</a>
                     <ul>
-                      <li><a href="pages/gallery.html">Terror</a></li>
-                      <li><a href="pages/full-width.html">Suspenso</a></li>
-                      <li><a href="pages/sidebar-left.html">Romance</a></li>
-                      <!-- <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
-                    <li><a href="pages/basic-grid.html">Basic Grid</a></li>
-                    <li><a href="pages/font-icons.html">Font Icons</a></li> -->
+                      <li><a href="../pages/horror-story.html">Horror</a></li>
+                      <li><a href="../pages/action-story.html">Action</a></li>
+                      <li><a href="../pages/romance-story.html">Romance</a></li>
                     </ul>
                   </li>
                   <li><a class="drop" href="#">User</a>
                     <ul>
                     <!-- <li><a href="pages/creator-form.html">Creator</a></li>--> 
                       <li><a href="../pages/user-form.html">User Register</a></li>
+                      <li><a href="../pages/user-login.html">Login</a></li>
                     </ul>
                   </li>
                   <li><a class="drop" href="#">Creator</a>
@@ -50,32 +49,35 @@
             </header>
           </div>
         <br>
-        <div class="hoc clear">
-            <h4 class="mb-3">Looking for...</h4>
+        <div class="hoc clear"style="background-color: rgb(174, 187, 216);">
+          <div class="container">
+            <h4 class="mb-3"style="color:black">Looking for...</h4>
             <input id="txtFind" type="text" class="form-control" placeholder="Find by username or id"
                 aria-label="Find by name or id" aria-describedby="button-addon2">
             <button id="btnFind" class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
-        </div>
+  
+          </div>
+                 </div>
         <br>
-        <div class="hoc clear">
-            <hr class="my-4">
-            <h4 class="mb-3">Register of User</h4>
+        <div class="modal-content" style="background-color: rgb(2, 2, 2);padding-right: 20ch;padding-left: 20ch;">
+<br>
+            <h1><b>Register of User</b></h1>
             <form method="POST" action="user-list.html" id="frmUser" class="needs-validation" novalidate>
                 <input type="hidden" id="txtId_User" value="0">
                 <div class="wrapper coloured" class="row g-3">
                     <div class="col-12">
-                        <label for="txtName" class="form-label">Name<input style="color: gray" type="text"
+                        <label for="txtName" class="form-label"><b>NAME</b><input style="color: gray" type="text"
                                 class="form-control" id="txtName" placeholder="Enter your name" required></label>
                         <div class="invalid-feedback"> </div>
                     </div>
                     <div class="col-sm-6">
-                        <label for="txtDate_Birth" class="form-label">Birthday <input style="color: gray" type="date"
+                        <label for="txtDate_Birth" class="form-label"><b>BIRTHDAY</b> <input style="color: gray" type="date"
                                 class="form-control" id="txtDate_Birth" placeholder="" required> <span
                                 class="text-muted"></span></label>
                         <div class="invalid-feedback"> </div>
-                    </div>
+                    </div><br>
                     <div class="col-sm-6">
-                        <label for="txtNacionality" class="form-label">Nacionality <input style="color: gray"
+                        <label for="txtNacionality" class="form-label"><b>NACIONALITY</b> <input style="color: gray"
                                 type="text" class="form-control" id="txtNacionality" placeholder="Ex:Ecuadorian"
                                 value="" required></label>
 
@@ -84,29 +86,58 @@
                     </div>
 
                     <div class="col-sm-6">
-                        <label for="txtMail" class="form-label">E-mail<input style="color: gray" type="text"
+                        <label for="txtMail" class="form-label"><b>E-MAIL</b><input style="color: gray" type="text"
                                 class="form-control" id="txtMail" placeholder="example@gmail.com" value=""></label>
 
                     </div>
 
                     <div class="col-sm-4">
-                        <label for="txtId_Users" class="form-label">Id User<input style="color: gray" type="text"
+                        <label for="txtId_Users" class="form-label"><b>ID USER</b><input style="color: gray" type="text"
                                 class="form-control" id="txtId_Users" placeholder="Ex: teitor" value=""></label>
                     </div>
 
                     <div class="col-sm-6">
-                        <label for="txtUser_Password" class="form-label">Password <input style="color: gray" type="password"
+                        <label for="txtUser_Password" class="form-label"><b>PASSWORD</b><input style="color: gray" type="password"
                                 min="1" max="20" class="form-control" id="txtUser_Password"> </label>
                     </div>
                     <br>
                 </div>
                 <hr class="my-4">
-                <button type="submit" class="w-100 btn btn-success btn-lg">Save User</button>
+                <button type="submit" class="w-100 btn btn-success btn-lg"><b>SAVE USER</b></button><br><br>
             </form>
         </div>
 
     </main>
-    <footer></footer>
+    <div class="bgded overlay row4"
+    style="background-image:url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Ym9va3NoZWxmfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80');"">
+    <footer id=" footer" class="hoc clear">
+    <!-- ################################################################################################ -->
+    <div class="one_quarter first">
+        <br>
+        <h1 class="logoname"><a href="index.html">The<span>B</span>logger</a></h1>
+        <p>Realizados sin fines de lucro, con orientacion educativa [<a href="#">&hellip;</a>]
+        </p>
+        <ul class="faico clear">
+            <li><a class="faicon-facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+            <li><a class="faicon-google-plus" href="#"><i class="fab fa-google-plus-g"></i></a></li>
+            <li><a class="faicon-linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
+            <li><a class="faicon-twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a class="faicon-vk" href="#"><i class="fab fa-vk"></i></a></li>
+        </ul>
+    </div>
+    </footer>
+</div>
+
+<div class="wrapper row5">
+    <div id="copyright" class="hoc clear">
+        <!-- ################################################################################################ -->
+        <p class="fl_left">Copyright &copy; 2021 - All Rights Reserved - <a href="#">TheBlog</a></p>
+        <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/"
+                title="Free Website Templates">OS Templates</a></p>
+        <!-- ################################################################################################ -->
+    </div>
+</div>
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
     <script src="../layout/scripts/jquery.min.js"></script>
     <script src="../layout/scripts/form-validation.js"></script>
     <script src="../layout/scripts/jquery.backtotop.js"></script>

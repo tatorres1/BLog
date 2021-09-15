@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+    <!--<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">-->
+    <title>User List</title>
+</head>
+
+<body>
+    <main>
+        <div class="wrapper row1">
+            <header id="header" class="hoc clear">
+                <div id="logo" class="fl_left">
+                    <!-- ################################################################################################ -->
+                    <h1 class="logoname"><a href="../index.html">The<span>B</span>logger</a></h1>
+                    <!-- ################################################################################################ -->
+                </div>
+                <nav id="mainav" class="fl_right">
+                    <!-- ################################################################################################ -->
+                    <ul class="clear">
+                        <li class="active"><a href="../index.html">Inicio</a></li>
+                        <li><a class="drop" href="#">Historias</a>
+                            <ul>
+                                <li><a href="../pages/gallery.html">Terror</a></li>
+                                <li><a href="../pages/full-width.html">Suspenso</a></li>
+                                <li><a href="../pages/sidebar-left.html">Romance</a></li>
+                                <!-- <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+                    <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+                    <li><a href="pages/font-icons.html">Font Icons</a></li> -->
+                            </ul>
+                        </li>
+                        <li><a class="drop" href="#">Login</a>
+                            <ul>
+                                <li><a href="../pages/creator-form.html">Creator</a></li>
+                                <li><a href="../pages/user-form.html">Reader- user</a></li>
+                            </ul>
+                        </li>
+                </nav>
+            </header>
+        </div>
+        <section>
+            <br>
+            <h3>User list</h3>
+
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Birthday</th>
+                        <th scope="col">Nacionality</th>
+                        <th scope="col">Mail</th>
+                        <th scope="col">Id User</th>
+                        <th scope="col">Password</th>
+                        <th scope="col"><a href="user-form.html" class="btn btn-success">New User</a></th>
+                    </tr>
+                </thead>
+                <tbody id="tblUsers">
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer></footer>
+
+    <script src="../layout/scripts/jquery.min.js"></script>
+    <script src="../layout/scripts/jquery.easypiechart.min.js"></script>
+    <script src="../layout/scripts/script-user-list.js"></script>
+</body>
+
+</html>
