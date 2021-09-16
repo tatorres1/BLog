@@ -46,47 +46,64 @@
 
     </div>
 
-    <div  style="background-image:url('https://i.pinimg.com/originals/74/42/df/7442df453f2197f67249ab1b49ebb44b.jpg');">
+    <div style="background-image:url('https://i.pinimg.com/originals/74/42/df/7442df453f2197f67249ab1b49ebb44b.jpg');">
       <section id="services" class="hoc container clear">
         <!-- ################################################################################################ -->
         <div class="hoc clear">
-          <form method="POST" id="frmUserLogin" class="modal-content" novalidate
+          <form method="POST" id="frmPublication" class="modal-content" novalidate
             style="background-color: rgb(174, 187, 216); padding: 20ch;">
-            <input type="hidden" id="txtId_Creator" value="0">
+            <input type="hidden" id="txtId_Publication" value="0">
             <h1><b>FILL THE FORM</b></h1>
             <p style="color: rgb(74, 128, 163); text-align:center">Please fill in this form to create a story.</p>
             <div class="container">
-              <h2><b>TITLE</b></h2>
-              <input style="color: gray" type="text" class="form-control" id="txt_Title" placeholder="Enter Title"
-                value="">
-              
-              <h2><b>DATE OF PUBLICATION</b></h2>
-              <input class="form-control" style="color: gray" type="date" id="txtDate_Publication" placeholder="" >
-              <br><br>
-              <h3><b>TYPE OF PUBLICATION</b></h3>
-              <span class="checkmark"><b>Thiller</b></span>
-              <input type="radio" checked="checked" name="radio">
+              <div>
+                <h2><b>TITLE</b></h2>
+                <input style="color: gray" type="text" class="form-control" id="txt_Title" placeholder="Enter Title"
+                  value="">
+              </div>
 
-              <span class="checkmark"><b>Love</b></span>
-              <input type="radio" checked="checked" name="radio">
-              <span class="checkmark"><b>Fiction</b></span>
-              <input type="radio" checked="checked" name="radio">
+              <div>
+                <h2><b>DATE OF PUBLICATION</b></h2>
+                <input class="form-control" style="color: gray" type="date" id="txtDate_Publication" placeholder="">
+                <br><br>
+              </div>
+
+              <div>
+                <label for="txtTypeP" style="color: rgb(74, 128, 163)"><b>TYPE OF PUBLICATION</b></label>
+                <select id="txtTypeP" class="content-select" aria-label="Type of PUBLICATION">
+                  <option value="0" selected>------------Selecc----</option>
+                  <option value="Horror">Horror</option>
+                  <option value="Love">Love</option>
+                  <option value="Action">Action</option>
+                </select>
+              </div>
+              <div>
+                <h2><b>DEVELOPMENT</b></h2>
+                <textarea style="color: rgb(8, 31, 46)" id="txtDevelopment" name="w3review" rows="12" cols="90">
+                  Write here...
+                 </textarea>
+              </div>
+
               <br>
+              <br>
+              <a href="creator-create-list.html" class="btn btn-success  btn-lg">save</a>
+             
             </div>
             <!--para llamar a la funcion dejs-->
-            <h2><b>DEVELOPMENT</b></h2>
-            <textarea style="color: rgb(8, 31, 46)" id="w3review" name="w3review" rows="12" cols="90">
-                Write here...
-               </textarea>
-            <br>
-            <a class="btn ">Submit</a>
             <br>
           </form>
         </div>
-        <!-- ################################################################################################ -->
+
       </section>
     </div>
   </div>
 </body>
+<script src="../layout/scripts/jquery.min.js"></script>
+<script src="../layout/scripts/form-validation.js"></script>
+<script src="../layout/scripts/jquery.backtotop.js"></script>
+<script src="../layout/scripts/jquery.mobilemenu.js"></script>
+<script src="../layout/scripts/script-creator-create.js"></script>
+<!-- Homepage specific -->
+<script src="../layout/scripts/jquery.easypiechart.min.js"></script>
 
 </html>
